@@ -20,8 +20,8 @@ class Guest
   end
 
   def self.pro_traveller
-    self.all.find do |guests|
-      guests.trips.count > 1
+    self.all.select do |guests|
+      guests.trips.length > 1
     end
   end
 
